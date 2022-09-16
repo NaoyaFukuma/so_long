@@ -6,7 +6,7 @@
 #    By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/01 17:35:48 by nfukuma           #+#    #+#              #
-#    Updated: 2022/09/16 20:24:08 by nfukuma          ###   ########.fr        #
+#    Updated: 2022/09/17 02:04:22 by nfukuma          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,11 @@ SRCDIR		=	src/
 SRCS		=	$(addprefix $(SRCDIR), $(SRCNAMES))
 OBJS		=	$(SRCS:%.c=%.o)
 
+# for 42vm
+#%.o: %.c
+#	$(CC) $(CFLAGS) -I/usr/include -Iminilibx-linux -Ilibft -Ilibgnl -O3 -c $< -o $@
+
+
 #.a library path
 LIBDIR		=	./libft
 GNLDIR		=	./libgnl
@@ -46,12 +51,14 @@ $(NAME)	:	$(OBJS_B)
 	make -C $(LIBDIR)
 	make -C $(MINILIBXDIR)
 	$(CC) $(CFLAGS) -framework OpenGL -framework AppKit -L $(LIBDIR) -L $(GNLDIR) -L $(MINILIBXDIR) -lft -lgnl -lmlx -lmlx_Darwin /usr/X11R6/lib/libX11.dylib /usr/X11R6/lib/libXext.dylib -o $@ $^
+#$(CC) $(CFLAGS) $^ -L$(MINILIBXDIR) -lmlx -L/usr/bin -lXext -lX11 -lm -lz -L$(LIBDIR) -lft  -L$(GNLDIR) -lgnl -o $@
 else
 $(NAME)	:	$(OBJS)
 	make -C $(LIBDIR)
 	make -C $(GNLDIR)
 	make -C $(MINILIBXDIR)
 	$(CC) $(CFLAGS) -framework OpenGL -framework AppKit -L $(LIBDIR) -L $(GNLDIR) -L $(MINILIBXDIR) -lft -lgnl -lmlx -lmlx_Darwin /usr/X11R6/lib/libX11.dylib /usr/X11R6/lib/libXext.dylib -o $@ $^
+#$(CC) $(CFLAGS) $^ -L$(MINILIBXDIR) -lmlx -L/usr/bin -lXext -lX11 -lm -lz -L$(LIBDIR) -lft  -L$(GNLDIR) -lgnl -o $@
 endif
 
 bonus	:
@@ -79,3 +86,4 @@ norm:
 
 .PHONY:		all clean fclean re bonus
 
+#$(CC) $(CFLAGS) -L $(LIBDIR) -L $(GNLDIR) -L -lft -lgnl -lmlx -lXext -lX11 -o $@ $^
