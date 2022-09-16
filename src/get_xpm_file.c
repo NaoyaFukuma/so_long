@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 12:46:42 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 17:49:11 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 20:13:07 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	get_player_xpm(t_info *info, int wid, int hei);
 static void	get_enemy_xpm(t_info *info, int wid, int hei);
-static bool check_null_xpm_file(t_info *info);
+static bool	check_null_xpm_file(t_info *info);
 
 void	get_xpm_file(t_info *info)
 {
@@ -93,18 +93,26 @@ static void	get_enemy_xpm(t_info *info, int wid, int hei)
 		info->mlx, "./img/enemy/enemyl3.xpm", &wid, &hei);
 }
 
-static bool check_null_xpm_file(t_info *info)
+static bool	check_null_xpm_file(t_info *info)
 {
 	if (info->img.blank == NULL || info->img.wall == NULL ||
-	info->img.item == NULL || info->img.exit == NULL || info->img.p_d1 == NULL ||
-	info->img.p_d2 == NULL || info->img.p_d3 == NULL || info->img.p_u1 == NULL ||
-	info->img.p_u2 == NULL || info->img.p_u3 == NULL || info->img.p_r1 == NULL ||
-	info->img.p_r2 == NULL || info->img.p_r3 == NULL || info->img.p_l1 == NULL ||
-	info->img.p_l2 == NULL || info->img.p_l3 == NULL || info->img.t_d1 == NULL ||
-	info->img.t_d2 == NULL || info->img.t_d3 == NULL || info->img.t_u1 == NULL ||
-	info->img.t_u2 == NULL || info->img.t_u3 == NULL || info->img.t_r1 == NULL ||
-	info->img.t_r2 == NULL || info->img.t_r3 == NULL || info->img.t_l1 == NULL ||
-	info->img.t_l2 == NULL || info->img.t_l3 == NULL)
+		info->img.item == NULL || info->img.exit == NULL
+			|| info->img.p_d1 == NULL ||
+		info->img.p_d2 == NULL || info->img.p_d3 == NULL
+			|| info->img.p_u1 == NULL ||
+		info->img.p_u2 == NULL || info->img.p_u3 == NULL
+			|| info->img.p_r1 == NULL ||
+		info->img.p_r2 == NULL || info->img.p_r3 == NULL
+			|| info->img.p_l1 == NULL ||
+		info->img.p_l2 == NULL || info->img.p_l3 == NULL
+			|| info->img.t_d1 == NULL ||
+		info->img.t_d2 == NULL || info->img.t_d3 == NULL
+			|| info->img.t_u1 == NULL ||
+		info->img.t_u2 == NULL || info->img.t_u3 == NULL
+			|| info->img.t_r1 == NULL ||
+		info->img.t_r2 == NULL || info->img.t_r3 == NULL
+			|| info->img.t_l1 == NULL ||
+		info->img.t_l2 == NULL || info->img.t_l3 == NULL)
 		return (true);
 	return (false);
 }

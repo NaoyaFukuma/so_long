@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:18:38 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 19:16:33 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 20:13:37 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	animation(t_info *info)
 		frame_133333(info);
 	if (info->frame % 188888 == 0)
 		frame_188888(info);
-
 	info->frame++;
 	return (0);
 }
@@ -76,20 +75,20 @@ static void	enemy_animation2(t_info *info, int i)
 	{
 		if (info->enemy_posi[i * 3 + 2] == DOWN)
 			mlx_put_image_to_window(
-				info->mlx, info->win, info->img.t_d2, info->enemy_posi[i
-					* 3] * 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
+				info->mlx, info->win, info->img.t_d2, info->enemy_posi[i * 3]
+					* 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
 		if (info->enemy_posi[i * 3 + 2] == UP)
 			mlx_put_image_to_window(
-				info->mlx, info->win, info->img.t_u2, info->enemy_posi[i
-					* 3] * 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
+				info->mlx, info->win, info->img.t_u2, info->enemy_posi[i * 3]
+					* 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
 		if (info->enemy_posi[i * 3 + 2] == LEFT)
 			mlx_put_image_to_window(
-				info->mlx, info->win, info->img.t_l2, info->enemy_posi[i
-					* 3] * 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
+				info->mlx, info->win, info->img.t_l2, info->enemy_posi[i * 3]
+					* 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
 		if (info->enemy_posi[i * 3 + 2] == RIGHT)
 			mlx_put_image_to_window(
-				info->mlx, info->win, info->img.t_r2, info->enemy_posi[i
-					* 3] * 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
+				info->mlx, info->win, info->img.t_r2, info->enemy_posi[i * 3]
+					* 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
 	}
 }
 
@@ -99,19 +98,19 @@ static void	enemy_animation3(t_info *info, int i)
 	{
 		if (info->enemy_posi[i * 3 + 2] == DOWN)
 			mlx_put_image_to_window(
-				info->mlx, info->win, info->img.t_d3, info->enemy_posi[i
-					* 3] * 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
+				info->mlx, info->win, info->img.t_d3, info->enemy_posi[i * 3]
+					* 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
 		if (info->enemy_posi[i * 3 + 2] == UP)
 			mlx_put_image_to_window(
-				info->mlx, info->win, info->img.t_u3, info->enemy_posi[i
-					* 3] * 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
+				info->mlx, info->win, info->img.t_u3, info->enemy_posi[i * 3]
+					* 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
 		if (info->enemy_posi[i * 3 + 2] == LEFT)
 			mlx_put_image_to_window(
-				info->mlx, info->win, info->img.t_l3, info->enemy_posi[i
-					* 3] * 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
+				info->mlx, info->win, info->img.t_l3, info->enemy_posi[i * 3]
+					* 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
 		if (info->enemy_posi[i * 3 + 2] == RIGHT)
 			mlx_put_image_to_window(
-				info->mlx, info->win, info->img.t_r3, info->enemy_posi[i
-					* 3] * 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
+				info->mlx, info->win, info->img.t_r3, info->enemy_posi[i * 3]
+					* 32, info->enemy_posi[i * 3 + 1] * 32 + 17);
 	}
 }

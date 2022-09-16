@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 00:03:12 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 19:16:54 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 20:13:53 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	util_clear_put_msg(t_info *info)
 	info->status = CLEARED;
 	mv_num = ft_itoa(info->mvnum);
 	mv_count_msg = ft_strjoin("Congratulation!! game clear Thanks for playing! Move :",
-			mv_num);
+								mv_num);
 	ft_putstr_fd("\e[32m", STDOUT_FILENO);
 	ft_putstr_fd(mv_count_msg, STDOUT_FILENO);
 	ft_putstr_fd("\e[m", STDOUT_FILENO);

@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 22:09:54 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 19:05:21 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 20:13:49 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 # include "../libft/libft.h"             // ...(ft)
 # include "../libgnl/libget_next_line.h" //for get_next_line(ft)
 # include "../minilibx-linux/mlx.h"
-# include <fcntl.h> // for open(2)
-# include <stdbool.h> // for bool type
-# include <stdio.h>  // for perror(3)
-# include <stdlib.h> // for exit(3) malloc,free(3)
-# include <sys/errno.h>	// for errno
-# include <unistd.h> // for write(2) close(2)
+# include <fcntl.h>     // for open(2)
+# include <stdbool.h>   // for bool type
+# include <stdio.h>     // for perror(3)
+# include <stdlib.h>    // for exit(3) malloc,free(3)
+# include <sys/errno.h> // for errno
+# include <unistd.h>    // for write(2) close(2)
 
 /* map chip */
 # define BLANK '0'
