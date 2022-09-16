@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:18:38 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 20:32:57 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 20:36:47 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,16 @@ static void	frame_66666(t_info *info)
 	{
 		if (info->player_posi[2] == UP)
 			mlx_put_image_to_window(info->mlx, info->win, info->img.p_u2,
-					info->player_posi[0] * 32, info->player_posi[1] * 32 + 17);
+				info->player_posi[0] * 32, info->player_posi[1] * 32 + 17);
 		if (info->player_posi[2] == DOWN)
 			mlx_put_image_to_window(info->mlx, info->win, info->img.p_d2,
-					info->player_posi[0] * 32, info->player_posi[1] * 32 + 17);
+				info->player_posi[0] * 32, info->player_posi[1] * 32 + 17);
 		if (info->player_posi[2] == RIGHT)
 			mlx_put_image_to_window(info->mlx, info->win, info->img.p_r2,
-					info->player_posi[0] * 32, info->player_posi[1] * 32 + 17);
+				info->player_posi[0] * 32, info->player_posi[1] * 32 + 17);
 		if (info->player_posi[2] == LEFT)
 			mlx_put_image_to_window(info->mlx, info->win, info->img.p_l2,
-					info->player_posi[0] * 32, info->player_posi[1] * 32 + 17);
+				info->player_posi[0] * 32, info->player_posi[1] * 32 + 17);
 		enemy_animation2(info, -1);
 	}
 }
