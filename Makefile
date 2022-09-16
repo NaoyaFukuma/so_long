@@ -6,7 +6,7 @@
 #    By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/01 17:35:48 by nfukuma           #+#    #+#              #
-#    Updated: 2022/09/16 19:28:13 by nfukuma          ###   ########.fr        #
+#    Updated: 2022/09/16 20:24:08 by nfukuma          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,11 @@ fclean	:	clean
 
 re:	fclean all
 
+norm:
+	norminette src/
+	norminette src_b/
+	norminette libft/
+	norminette libgnl/
+
 .PHONY:		all clean fclean re bonus
 
-#
