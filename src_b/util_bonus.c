@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 00:03:12 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 20:13:53 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 20:44:56 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	util_lose_put_msg(t_info *info)
 {
 	info->status = CLEARED;
 	mlx_string_put(info->mlx, info->win, 3, 12, 0xffffff,
-			"You lose. See you again.");
+		"You lose. See you again.");
 	ft_putstr_fd("\e[31mYou lose. See you again.\e[m", STDERR_FILENO);
 }
 
@@ -38,8 +38,7 @@ void	util_clear_put_msg(t_info *info)
 
 	info->status = CLEARED;
 	mv_num = ft_itoa(info->mvnum);
-	mv_count_msg = ft_strjoin("Congratulation!! game clear Thanks for playing! Move :",
-								mv_num);
+	mv_count_msg = ft_strjoin("Congratulation game clear!! Move :", mv_num);
 	ft_putstr_fd("\e[32m", STDOUT_FILENO);
 	ft_putstr_fd(mv_count_msg, STDOUT_FILENO);
 	ft_putstr_fd("\e[m", STDOUT_FILENO);
@@ -51,7 +50,7 @@ void	util_clear_put_msg(t_info *info)
 bool	util_clear_check(t_info *info, int move_x, int move_y)
 {
 	if (info->item_count == 0 && info->map[info->player_posi[1]
-		+ move_y][info->player_posi[0] + move_x] == EXIT)
+			+ move_y][info->player_posi[0] + move_x] == EXIT)
 		return (true);
 	return (false);
 }
