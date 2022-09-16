@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 22:09:54 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 19:05:35 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 19:05:21 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG_BONUS_H
 
 /* header */
 # include "../libft/libft.h"             // ...(ft)
 # include "../libgnl/libget_next_line.h" //for get_next_line(ft)
 # include "../minilibx-linux/mlx.h"
 # include <fcntl.h> // for open(2)
-# include <stdbool.h>
+# include <stdbool.h> // for bool type
 # include <stdio.h>  // for perror(3)
 # include <stdlib.h> // for exit(3) malloc,free(3)
-# include <sys/errno.h>
+# include <sys/errno.h>	// for errno
 # include <unistd.h> // for write(2) close(2)
 
 /* map chip */
 # define BLANK '0'
 # define WALL '1'
 # define ITEM 'C'
-# define OPEN_ITEM 'O'
 # define EXIT 'E'
 # define PLAYER 'P'
 # define ENEMY 'T'
 
 /* game status */
-# define MOVED 99
 # define CLEARED 100
 
 /* body orientation */
@@ -45,7 +43,6 @@
 
 /* event */
 # define X_EVENT_KEY_PRESS 2
-# define X_EVENT_KEY_RELEASE 3
 # define X_EVENT_DESTROYNOTIFY 17
 
 /* key */

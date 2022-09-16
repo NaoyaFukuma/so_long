@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   valitade_map.c                                     :+:      :+:    :+:   */
+/*   valitade_map_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 11:01:39 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 15:45:19 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 19:17:00 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 static void	validate_rectagular(t_info *info);
 static void	validate_around_wall(t_info *info);

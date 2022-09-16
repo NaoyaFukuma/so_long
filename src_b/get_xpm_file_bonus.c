@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_xpm_file.c                                     :+:      :+:    :+:   */
+/*   get_xpm_file_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 12:46:42 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 17:49:11 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 19:16:40 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 static void	get_player_xpm(t_info *info, int wid, int hei);
 static void	get_enemy_xpm(t_info *info, int wid, int hei);
