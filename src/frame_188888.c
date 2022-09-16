@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 12:35:20 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 20:38:55 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 20:39:41 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,10 @@ static bool	same_direction(t_info *info, int dir, int i)
 			- 1][info->enemy_posi[i * 3]] != WALL)
 		info->enemy_posi[i * 3 + 1] = info->enemy_posi[i * 3 + 1] - 1;
 	else if (dir == LEFT && info->map[info->enemy_posi[i * 3
-			+ 1]][info->enemy_posi[i * 3] - 1] != WALL)
+				+ 1]][info->enemy_posi[i * 3] - 1] != WALL)
 		info->enemy_posi[i * 3] = info->enemy_posi[i * 3] - 1;
 	else if (dir == RIGHT && info->map[info->enemy_posi[i * 3
-			+ 1]][info->enemy_posi[i * 3] + 1] != WALL)
+				+ 1]][info->enemy_posi[i * 3] + 1] != WALL)
 		info->enemy_posi[i * 3] = info->enemy_posi[i * 3] + 1;
 	else if (dir == DOWN && info->map[info->enemy_posi[i * 3 + 1]
 			+ 1][info->enemy_posi[i * 3]] != WALL)
@@ -73,7 +73,7 @@ static void	different_direction1(t_info *info, int i)
 		info->enemy_posi[i * 3 + 2] = LEFT;
 	}
 	else if (info->map[info->enemy_posi[i * 3 + 1]][info->enemy_posi[i * 3]
-			+ 1] != WALL)
+		+ 1] != WALL)
 	{
 		info->enemy_posi[i * 3] = info->enemy_posi[i * 3] + 1;
 		info->enemy_posi[i * 3 + 2] = RIGHT;
