@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 16:11:35 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 00:05:45 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 15:22:42 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,15 @@ static void	get_map(char *map, t_info *info)
 
 	map_fd = open(map, O_RDONLY);
 	if (map_fd < 0)
-		util_perror_exit("open");
+		util_perror_exit("open", 1);
 	while (1)
 	{
 		info->map = ft_remalloc(info->map, sizeof(char *) * (info->hei + 1),
 				sizeof(char *) * info->hei);
 		if (!info->map)
-			util_perror_exit("malloc");
+			util_perror_exit("malloc", 1);
 		info->map[info->hei] = get_next_line(map_fd);
-		if (!info->map[info->hei] || info->map[info->hei][0] == '\n')
+		if (!info->map[info->hei])
 			break ;
 		info->hei++;
 	}
@@ -68,7 +68,7 @@ static void	get_player_and_enemy_posi(t_info *info, size_t x, size_t y, int i)
 {
 	info->enemy_posi = malloc(sizeof(int) * info->enemy_count * 3);
 	if (!info->enemy_posi)
-		util_perror_exit("ft_remalloc");
+		util_perror_exit("ft_remalloc", 1);
 	while (++y < info->hei)
 	{
 		x = -1;

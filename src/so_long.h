@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 22:09:54 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 12:04:48 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 14:23:39 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 # include "../libft/libft.h"             // ...(ft)
 # include "../libgnl/libget_next_line.h" //for get_next_line(ft)
 # include "../minilibx-linux/mlx.h"
-# include <fcntl.h>  // for open(2)
+# include <fcntl.h> // for open(2)
+# include <stdbool.h>
 # include <stdio.h>  // for perror(3)
 # include <stdlib.h> // for exit(3) malloc,free(3)
 # include <sys/errno.h>
 # include <unistd.h> // for write(2) close(2)
-# include <stdbool.h>
 
 /* map chip */
 # define BLANK '0'
@@ -94,7 +94,7 @@ typedef struct s_data
 	void	*win;
 	char	status;
 	char	**map;
-	size_t		frame;
+	size_t	frame;
 	int		player_posi[3];
 	int		*enemy_posi;
 	int		enemy_count;
@@ -105,38 +105,38 @@ typedef struct s_data
 	int		item_count;
 }			t_info;
 
-
 /* in main.c */
-int	destroy_window(t_info *info);
+int			destroy_window(t_info *info);
 
 /* in validate.c */
-void	validate_file_name(int ac, char *file_name);
+void		validate_file_name(int ac, char *file_name);
 
 /* in validate_map.c */
 void		validate_map(t_info *info);
 
 /* in get_xpm_file */
-void	get_xpm_file(t_info *info);
+void		get_xpm_file(t_info *info);
 
 /* in put_map.c */
-int		put_map(t_info *info);
+int			put_map(t_info *info);
 
 /* in keypress.c */
-int	keypress(int keycode, t_info *info);
-
+int			keypress(int keycode, t_info *info);
 
 /* animation.c */
-int	animation(t_info *info);
+int			animation(t_info *info);
+
+/* frame_188888.c */
+void		frame_188888(t_info *info);
 
 /* in util.c */
-void	util_perror_exit(char *error_message);
-void	util_lose_put_msg(t_info *info);
-void	util_clear_put_msg(t_info *info);
-bool	util_clear_check(t_info *info, int move_x, int move_y);
-bool	util_lose_check(t_info *info, int move_x, int move_y);
+void		util_perror_exit(char *error_message, int perror_flag);
+void		util_lose_put_msg(t_info *info);
+void		util_clear_put_msg(t_info *info);
+bool		util_clear_check(t_info *info, int move_x, int move_y);
+bool		util_lose_check(t_info *info, int move_x, int move_y);
 
-void	put_player(t_info *info);
-void	put_enemy(t_info *info);
-
+void		put_player(t_info *info);
+void		put_enemy(t_info *info);
 
 #endif

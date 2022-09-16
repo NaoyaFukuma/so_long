@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 12:46:42 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 12:12:38 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 14:26:23 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	get_xpm_file(t_info *info)
 	info->img.exit = mlx_xpm_file_to_image(
 		info->mlx, "./img/exit/exit.xpm", &wid, &hei);
 	if (check_null_xpm_file(info))
-		util_perror_exit("mlx_xpm_file_to_image");
+		util_perror_exit("mlx_xpm_file_to_image", 0);
 }
 
 static void	get_player_xpm(t_info *info, int wid, int hei)

@@ -6,18 +6,21 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 00:03:12 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/09/16 10:54:29 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 14:32:08 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	util_perror_exit(char *error_message)
+void	util_perror_exit(char *error_message, int perror_flag)
 {
-	ft_putstr_fd("\e[31m", STDERR_FILENO);
-	perror(error_message);
-	ft_putstr_fd("\e[m", STDERR_FILENO);
-	exit(1);
+	ft_putstr_fd("\e[31mError\n", STDERR_FILENO);
+	if (perror_flag == 1)
+		perror(error_message);
+	else
+		ft_putstr_fd(error_message, STDERR_FILENO);
+	ft_putstr_fd("\n\e[m", STDERR_FILENO);
+	exit(EXIT_FAILURE);
 }
 
 void	util_lose_put_msg(t_info *info)

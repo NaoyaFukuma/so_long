@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 13:18:05 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/08/26 23:28:43 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/09/16 14:55:04 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,24 +104,15 @@ char	*get_next_line(int fd)
 	t_fd_info			*lst_p;
 
 	if (BUFFER_SIZE <= 0 || read(fd, NULL, 0) == -1)
-	{
 		return (NULL);
-	}
 	lst_p = ft_set_pointer(&static_p, &lst_p, fd);
 	if (lst_p == NULL)
-	{
 		return (NULL);
-	}
 	if (ft_strchar(lst_p->text, '\n'))
 		return (ft_split_and_store_text(lst_p->text, lst_p->text_len, lst_p));
 	if (lst_p->fin_flag == 1 && lst_p->text_len == 0)
-	{
-		write(1, "???\n", 4);
 		return (ft_delete_one_strage(&static_p, &lst_p));
-	}
 	if (lst_p->fin_flag == 1)
-	{
 		return (ft_push_end_line(&lst_p));
-	}
 	return (ft_read_file_push_line(&lst_p, &static_p));
 }

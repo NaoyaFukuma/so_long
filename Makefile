@@ -6,7 +6,7 @@
 #    By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/01 17:35:48 by nfukuma           #+#    #+#              #
-#    Updated: 2022/09/15 22:13:17 by nfukuma          ###   ########.fr        #
+#    Updated: 2022/09/16 12:36:08 by nfukuma          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCDIR_B		=	src_b/
 SRCS_B		=	$(addprefix $(SRCDIR), $(SRCNAMES_B))
 OBJS		=	$(SRCS_B:%.c=%.o)
 
-SRCNAMES	=	animation.c get_xpm_file.c main.c put_map.c util.c validate_file_name.c valitade_map.c keypress.c
+SRCNAMES	=	animation.c get_xpm_file.c main.c put_map.c util.c validate_file_name.c valitade_map.c keypress.c frame_188888.c
 SRCDIR		=	src/
 SRCS		=	$(addprefix $(SRCDIR), $(SRCNAMES))
 OBJS		=	$(SRCS:%.c=%.o)
